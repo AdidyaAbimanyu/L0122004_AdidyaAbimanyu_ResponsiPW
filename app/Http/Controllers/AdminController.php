@@ -15,7 +15,7 @@ class AdminController extends Controller
 
     public function tambah()
     {
-        return view('forminsert');
+        return view('admin.forminsert');
     }
 
     public function store(Request $request)
@@ -64,7 +64,7 @@ class AdminController extends Controller
     public function destroy(Request $request)
     {
         $validatedData = $request->validate([
-            'id' => 'required|integer|exists:pegawais,id',
+            'id' => 'required|integer|exists:pegawai,id',
         ]);
 
         $pegawai = Pegawai::findOrFail($request->input('id'));

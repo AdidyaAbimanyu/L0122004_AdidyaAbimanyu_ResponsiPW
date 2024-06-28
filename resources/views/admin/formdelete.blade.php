@@ -16,7 +16,7 @@
                     @csrf
                     <input type="hidden" name="id" value="{{ $pegawai->id }}">
                     <button type="submit" class="btn btn-danger">Delete</button>
-                    <a href="{{ route('index') }}" class="btn btn-secondary">Cancel</a>
+                    <a href="{{ route('admin.index') }}" class="btn btn-secondary">Cancel</a>
                 </form>
             </div>
         </div>
